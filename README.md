@@ -1,5 +1,4 @@
 # wifiRuleToggle
-Ionic 2 App sample, to interact with OpenWRT UCI
 
 This app interacts with your router running on OpenWRT firmware using JSON RPC.
 

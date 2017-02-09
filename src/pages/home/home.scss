@@ -1,0 +1,54 @@
+page-home {
+    $SIDEMENU_TOP: #FFFFFF;
+    $SIDEMENU_BOTTOM: #CEDBE9;
+    $SIDEMENU_TRANSPARENCY: rgba(255, 255, 255, 0.4);
+    ion-content {
+        background: -webkit-gradient(top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -o-linear-gradient(bottom, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -moz-linear-gradient(bottom, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: linear-gradient(to bottom, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    }
+    #okay_button {
+        margin-bottom: 20px;
+    }
+    #cancel_button {
+        background: #B21616;
+        margin-bottom: 20px;
+    }
+    // This hack make the vertical scrollbar visible, only when there is overflow of content.
+    // This class is used by 'ion-content' internally to set the scrollbar properties.
+    .scroll-content {
+        overflow-y: auto;
+    }
+    @mixin stretched() {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+    @mixin vertical_align_top() {
+        position: relative;
+        right: 0;
+        top: 0;
+        left: 0;
+        margin: auto;
+    }
+    @mixin vertical_align_bottom() {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+    .stretched_element {
+        @include stretched();
+    }
+    .vertical_alignment_bottom {
+        @include vertical_align_bottom();
+    }
+    .vertical_alignment_top {
+        @include vertical_align_top();
+    }
+}

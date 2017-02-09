@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            Toggle Sunny's WiFi
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-label text-center>{{ greeting || 'Checking current status...' }}</ion-label>
+    <ion-label text-center>{{ action_message }}</ion-label>
+</ion-content>
+
+<ion-footer style="padding: 4px;">
+    <button id="okay_button" ion-button full [hidden]="ok_button_invisible" (click)="okClicked();">Yes</button>
+    <button id="cancel_button" ion-button full color="#B21616" icon-left (click)="okCancelClicked();">{{cancelButtonText}}</button>
+</ion-footer>
